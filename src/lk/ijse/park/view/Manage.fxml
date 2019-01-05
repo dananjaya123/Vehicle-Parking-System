@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pnlManage" prefHeight="648.0" prefWidth="1139.0" style="-fx-background-color: #eae8e8;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.park.controller.ManagController">
+   <children>
+      <Separator layoutX="1.0" layoutY="51.0" prefHeight="4.0" prefWidth="1139.0" />
+      <Label layoutX="12.0" layoutY="63.0" prefHeight="31.0" prefWidth="1117.0" style="-fx-background-color: #1E8449;" text="  Manage Payment" textFill="#fffdfd">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="137.0" layoutY="418.0" prefHeight="18.0" prefWidth="106.0" style="-fx-background-color: #E67E22;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="14.0" layoutY="418.0" prefHeight="18.0" prefWidth="106.0" style="-fx-background-color: #5999C7;" text="Edit" textFill="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="imageParkinEdit" fitHeight="18.0" fitWidth="25.0" layoutX="25.0" layoutY="422.0" onMouseEntered="#imageParkinEditEnterd" onMouseExited="#imageParkinEditExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Edit_File_96px.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageParkinDelete" fitHeight="18.0" fitWidth="25.0" layoutX="149.0" layoutY="422.0" onMouseEntered="#imageParkinDeleteEntered" onMouseExited="#imageParkinDeleteExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Trash_96px.png" />
+         </image>
+      </ImageView>
+      <TableView layoutX="12.0" layoutY="148.0" prefHeight="197.0" prefWidth="1117.0">
+         <columns>
+            <TableColumn prefWidth="87.0" text="Parkin_ID" />
+            <TableColumn prefWidth="110.0" text="Name " />
+            <TableColumn prefWidth="111.0" text="Vehicle Number" />
+            <TableColumn prefWidth="105.0" text="Vehicle Tyep" />
+            <TableColumn prefWidth="112.0" text="Parkin Aria" />
+            <TableColumn prefWidth="91.0" text="Slot" />
+            <TableColumn prefWidth="101.0" text="Payment_ID" />
+            <TableColumn minWidth="0.0" prefWidth="83.0" text="Check in" />
+            <TableColumn minWidth="0.0" prefWidth="95.0" text="Check Out" />
+            <TableColumn minWidth="0.0" prefWidth="95.0" text="Fee" />
+            <TableColumn minWidth="0.0" prefWidth="128.0" text="Totale Amount" />
+         </columns>
+      </TableView>
+      <TextField layoutX="437.0" layoutY="66.0" prefHeight="25.0" prefWidth="230.0" />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="402.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Search_100px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="673.0" layoutY="66.0" prefHeight="25.0" prefWidth="79.0" text="Search" textFill="#c9c9c9" />
+      <Separator layoutX="167.0" layoutY="10.0" orientation="VERTICAL" prefHeight="39.0" prefWidth="6.0" />
+      <Label layoutX="984.0" layoutY="23.0" prefHeight="25.0" prefWidth="61.0" text="Home   &gt;" />
+      <Label layoutX="1045.0" layoutY="23.0" prefHeight="25.0" prefWidth="95.0" text="Payment" textFill="#949494" />
+      <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="966.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Speed_96px_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagePaymentPrint" fitHeight="31.0" fitWidth="32.0" layoutX="1080.0" layoutY="107.0" onMouseClicked="#imagePaymentPrintClicked" onMouseEntered="#imagePaymentPrintEntered" onMouseExited="#imagePaymentPrintExited" pickOnBounds="true">
+         <image>
+            <Image url="@../assest/icons8_Print_104px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="978.0" layoutY="112.0" prefHeight="25.0" prefWidth="95.0" text="       Print Report" textFill="#949494" />
+      <JFXButton fx:id="btnManage" layoutX="173.0" layoutY="10.0" onMouseClicked="#btnManageClicked" prefHeight="39.0" prefWidth="166.0" text="Manage Payment" textFill="#a19696">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <TableView layoutX="12.0" layoutY="443.0" prefHeight="191.0" prefWidth="1117.0">
+         <columns>
+            <TableColumn prefWidth="101.0" text="Parkin_ID" />
+            <TableColumn prefWidth="136.0" text="Name " />
+            <TableColumn prefWidth="127.0" text="Vehicle Number" />
+            <TableColumn prefWidth="131.0" text="Vehicle Tyep" />
+            <TableColumn prefWidth="158.0" text="Parkin Aria" />
+            <TableColumn prefWidth="146.0" text="Slot" />
+            <TableColumn prefWidth="157.0" text="Check In" />
+            <TableColumn minWidth="0.0" prefWidth="157.0" text="Daate" />
+         </columns>
+      </TableView>
+      <Label layoutX="12.0" layoutY="372.0" prefHeight="31.0" prefWidth="1117.0" style="-fx-background-color: #1E8449;" text="  Manage Parkin" textFill="#fffdfd">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField layoutX="437.0" layoutY="375.0" prefHeight="25.0" prefWidth="230.0" />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="402.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Search_100px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="673.0" layoutY="375.0" prefHeight="25.0" prefWidth="79.0" text="Search" textFill="#c9c9c9" />
+      <JFXButton layoutX="146.0" layoutY="118.0" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: #E67E22;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="23.0" layoutY="118.0" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: #5999C7;" text="Edit" textFill="WHITE">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="imagePaymetEdit1" fitHeight="18.0" fitWidth="25.0" layoutX="34.0" layoutY="122.0" onMouseEntered="#imagePaymetEditEntered" onMouseExited="#imagePaymetEditExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Edit_File_96px.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagePaymentDelete1" fitHeight="18.0" fitWidth="25.0" layoutX="158.0" layoutY="122.0" onMouseEntered="#imagePaymentDeleteEntered" onMouseExited="#imagePaymentDeleteExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Trash_96px.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageParkinPrint" fitHeight="31.0" fitWidth="32.0" layoutX="1080.0" layoutY="407.0" onMouseClicked="#imageParkinPrintClicked" onMouseEntered="#imageParkinPrintEntered" onMouseExited="#imagePaymentPrintExited" pickOnBounds="true">
+         <image>
+            <Image url="@../assest/icons8_Print_104px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="978.0" layoutY="412.0" prefHeight="25.0" prefWidth="95.0" text="       Print Report" textFill="#949494" />
+      <JFXButton fx:id="btnDashboard" layoutX="14.0" layoutY="10.0" onMouseClicked="#btnDashboardClicked" prefHeight="39.0" prefWidth="148.0" text="Dashboard" textFill="#a19696">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

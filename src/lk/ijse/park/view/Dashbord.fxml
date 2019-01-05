@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pnlDashboard" prefHeight="648.0" prefWidth="1139.0" style="-fx-background-color: #eae8e8;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.park.controller.DashbordController">
+   <children>
+      <Separator layoutX="1.0" layoutY="51.0" prefHeight="4.0" prefWidth="1139.0" />
+      <Label layoutX="971.0" layoutY="26.0" prefHeight="25.0" prefWidth="61.0" text="Home   &gt;" />
+      <Label layoutX="1032.0" layoutY="26.0" prefHeight="25.0" prefWidth="95.0" text="Dashbord" textFill="#949494" />
+      <Label layoutX="19.0" layoutY="59.0" prefHeight="100.0" prefWidth="276.0" style="-fx-background-color: #85C1E9;">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="415.0" layoutY="59.0" prefHeight="100.0" prefWidth="276.0" style="-fx-background-color: #EB984E;">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="833.0" layoutY="59.0" prefHeight="100.0" prefWidth="276.0" style="-fx-background-color: #1E8449;">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="18.0" layoutY="134.0" prefHeight="25.0" prefWidth="276.0" style="-fx-background-color: #5999C7;" text="                                More info" textFill="#fcf7f7" />
+      <Label layoutX="415.0" layoutY="134.0" prefHeight="25.0" prefWidth="276.0" style="-fx-background-color: #E67E22;" text="                                More info" textFill="WHITE" />
+      <Label layoutX="833.0" layoutY="134.0" prefHeight="25.0" prefWidth="276.0" style="-fx-background-color: #145A32;" text="                                More info" textFill="#fff9f9" />
+      <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="180.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Login_96px_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="579.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Login_96px_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="993.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Login_96px_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageCar" fitHeight="75.0" fitWidth="84.0" layoutX="210.0" layoutY="59.0" onMouseEntered="#imageCarEntered" onMouseExited="#imageCarExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Sedan_96px.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="imageLongVehicle" fitHeight="75.0" fitWidth="84.0" layoutX="607.0" layoutY="59.0" onMouseEntered="#imageLongVehicleEntered" onMouseExited="#imageLongVehicleExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Semi_Truck_96px_1.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="imageBicycle" fitHeight="75.0" fitWidth="84.0" layoutX="1025.0" layoutY="59.0" onMouseEntered="#imageBicycleEntered" onMouseExited="#imageBicycleExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Motorcycle_104px_1.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Label fx:id="lblLight" layoutX="18.0" layoutY="68.0" prefHeight="61.0" prefWidth="187.0" text="2" textFill="#fffbfb">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHeavy" layoutX="415.0" layoutY="68.0" prefHeight="61.0" prefWidth="187.0" text="2" textFill="#fffbfb">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBicycle" layoutX="833.0" layoutY="68.0" prefHeight="61.0" prefWidth="187.0" text="2" textFill="#fffbfb">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="immageDashboardHome" fitHeight="18.0" fitWidth="30.0" layoutX="953.0" layoutY="30.0" onMouseEntered="#immageDashboardHomeEntered" onMouseExited="#immageDashboardHomeExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Speed_96px_1.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="3.0" layoutY="168.0" prefHeight="4.0" prefWidth="1132.0" />
+      <Separator layoutX="143.0" layoutY="6.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="8.0" />
+      <LineChart fx:id="linechartParkingRate" layoutX="77.0" layoutY="197.0" prefHeight="400.0" prefWidth="864.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+         <effect>
+            <DropShadow />
+         </effect>
+      </LineChart>
+      <Label layoutX="14.0" layoutY="5.0" prefHeight="40.0" prefWidth="124.0" text="Dashboard" textFill="#9a9696">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

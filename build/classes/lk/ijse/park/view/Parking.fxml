@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pnlParkin" prefHeight="648.0" prefWidth="1139.0" style="-fx-background-color: #eae8e8;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.park.controller.ParkingController">
+   <children>
+      <Separator layoutX="1.0" layoutY="51.0" prefHeight="4.0" prefWidth="1139.0" />
+      <Label layoutX="971.0" layoutY="26.0" prefHeight="25.0" prefWidth="61.0" text="Home   &gt;" />
+      <Label layoutX="1032.0" layoutY="26.0" prefHeight="25.0" prefWidth="95.0" text="Parkin" textFill="#949494" />
+      <ImageView fx:id="immageDashboardHome" fitHeight="18.0" fitWidth="30.0" layoutX="953.0" layoutY="30.0" onMouseEntered="#immageDashboardHomeEntered" onMouseExited="#immageDashboardHomeExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Speed_96px_1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="60.0" layoutY="57.0" prefHeight="40.0" prefWidth="106.0" text="Parking">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageAddParkin" fitHeight="30.0" fitWidth="38.0" layoutX="27.0" layoutY="62.0" onMouseEntered="#imageAddParkinEntered" onMouseExited="#imageAddParkinExited" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Car_96px_2.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnDashboard" buttonType="RAISED" layoutX="18.0" layoutY="10.0" onMouseClicked="#btnManage2Clicked" prefHeight="39.0" prefWidth="117.0" text="Parkin" textFill="#a19696">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="143.0" layoutY="6.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="8.0" />
+      <AnchorPane layoutX="4.0" layoutY="103.0" prefHeight="281.0" prefWidth="871.0" style="-fx-background-color: #ffff;">
+         <children>
+            <JFXTextField fx:id="textCustomerName" focusColor="#a9aaae" labelFloat="true" layoutX="16.0" layoutY="101.0" onAction="#textCustomerNameOnAction" prefHeight="25.0" prefWidth="182.0" promptText="Name" />
+            <JFXTextField fx:id="textCustomerAddress" focusColor="#a9aaae" labelFloat="true" layoutX="16.0" layoutY="141.0" onAction="#textCustomerAddressOnAction" prefHeight="25.0" prefWidth="182.0" promptText="Address" />
+            <JFXTextField fx:id="textNIC" focusColor="#a9aaae" labelFloat="true" layoutX="16.0" layoutY="57.0" onAction="#textNicOnAction" onKeyReleased="#textNICOnKeyReleasd" prefHeight="25.0" prefWidth="182.0" promptText="NIC" />
+            <JFXTextField fx:id="textCustomerPhoneNumber" focusColor="#a9aaae" labelFloat="true" layoutX="16.0" layoutY="179.0" onAction="#textCustomerPhoneNumberOnAction" prefHeight="25.0" prefWidth="182.0" promptText="Phone Number" />
+            <JFXTextField fx:id="textEmail" focusColor="#a9aaae" labelFloat="true" layoutX="16.0" layoutY="217.0" onAction="#textEmailOnAction" prefHeight="25.0" prefWidth="182.0" promptText="Email" />
+            <JFXButton fx:id="btnAddParking" buttonType="RAISED" layoutX="750.0" layoutY="242.0" onAction="#btnAddParkingAction" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #5999C7; -fx-background-radius: 20;" text="Add" textFill="WHITE" />
+            <ImageView fitHeight="18.0" fitWidth="25.0" layoutX="759.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8_Downloading_Updates_96px.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="textVID" focusColor="#a9aaae" labelFloat="true" layoutX="393.0" layoutY="44.0" prefHeight="25.0" prefWidth="203.0" promptText="VID" />
+            <JFXTextField fx:id="textVehicleNumber" focusColor="#a9aaae" labelFloat="true" layoutX="393.0" layoutY="101.0" onAction="#textVehicleNumberOnAction" prefHeight="25.0" prefWidth="203.0" promptText="Vehicle Number" />
+            <Label layoutX="394.0" layoutY="204.0" prefHeight="25.0" prefWidth="75.0" text="Vehicle Color" />
+            <Separator layoutX="307.0" layoutY="14.0" orientation="VERTICAL" prefHeight="253.0" prefWidth="0.0" />
+            <Label layoutX="78.0" layoutY="4.0" prefHeight="27.0" prefWidth="86.0" text="Customer">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="434.0" layoutY="2.0" prefHeight="18.0" prefWidth="86.0" text="Vehicle">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmboVehicleCategory" focusColor="#a9aaae" labelFloat="true" layoutX="393.0" layoutY="154.0" onAction="#cmboVehicleCategoryOnAction" prefHeight="25.0" prefWidth="203.0" promptText="Vehicle Category" />
+            <JFXColorPicker fx:id="ClpVehicleColor" layoutX="489.0" layoutY="203.0" onAction="#ClpVehicleColorOnAction" />
+            <JFXButton buttonType="RAISED" layoutX="793.0" layoutY="153.0" onAction="#btnParkSlotSelectOnAction" prefHeight="27.0" prefWidth="49.0" style="-fx-background-color: #407A52; -fx-background-radius: 20;" text="Select" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="textParkingArea" focusColor="#a9aaae" labelFloat="true" layoutX="649.0" layoutY="101.0" prefHeight="25.0" prefWidth="133.0" promptText="Parking Area" />
+            <JFXTextField fx:id="textSlotNumber" editable="false" labelFloat="true" layoutX="649.0" layoutY="154.0" prefHeight="25.0" prefWidth="133.0" promptText="Slot Number" />
+            <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="649.0" layoutY="243.0" onAction="#btnClearOnAction" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #873600; -fx-background-radius: 20;" text="Clear" textFill="WHITE" />
+            <Label fx:id="lblNic" layoutX="198.0" layoutY="61.0" prefHeight="17.0" prefWidth="95.0" textFill="RED" />
+            <Label fx:id="lblname" layoutX="198.0" layoutY="105.0" prefHeight="17.0" prefWidth="95.0" textFill="RED" />
+            <Label fx:id="lblAddress" layoutX="198.0" layoutY="145.0" prefHeight="17.0" prefWidth="95.0" textFill="RED" />
+            <Label fx:id="lblPhoneNumber" layoutX="198.0" layoutY="183.0" prefHeight="17.0" prefWidth="95.0" textFill="RED" />
+            <Label fx:id="lblEmail" layoutX="198.0" layoutY="220.0" prefHeight="17.0" prefWidth="95.0" textFill="RED" />
+            <Label fx:id="lblVehicleNumber" layoutX="394.0" layoutY="126.0" prefHeight="17.0" prefWidth="203.0" textFill="RED" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <Label layoutX="4.0" layoutY="388.0" prefHeight="30.0" prefWidth="1122.0" style="-fx-background-color: #1E8449;" text="  Manage Parkin" textFill="#fffdfd">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TextField layoutX="429.0" layoutY="390.0" prefHeight="25.0" prefWidth="230.0" />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="394.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Search_100px.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblView" layoutX="4.0" layoutY="451.0" prefHeight="188.0" prefWidth="1122.0">
+         <columns>
+            <TableColumn fx:id="colomeCustomerName" prefWidth="121.0" text="Name " />
+            <TableColumn fx:id="colomeNIC" prefWidth="128.0" text="NIC" />
+            <TableColumn fx:id="colomeVehicleNumber" minWidth="0.0" prefWidth="139.0" text="Vehicle Number" />
+            <TableColumn fx:id="colomeCheckInDate" minWidth="0.0" prefWidth="149.0" text="Check In Date" />
+            <TableColumn fx:id="colomeCheckInTime" minWidth="0.0" prefWidth="132.0" text="Check In Time" />
+            <TableColumn fx:id="colomeCheckOutTime" minWidth="0.0" prefWidth="122.0" text="Check Out Time" />
+            <TableColumn fx:id="colomeCheckOutDate" minWidth="0.0" prefWidth="128.0" text="Check Out Date" />
+            <TableColumn fx:id="colomeAmount" minWidth="0.0" prefWidth="99.0" text="Amount" />
+            <TableColumn fx:id="colomeParkingArea" minWidth="0.0" prefWidth="99.0" text="Parking Area" />
+         </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <ImageView fx:id="imageParkinPrint" fitHeight="25.0" fitWidth="25.0" layoutX="1082.0" layoutY="426.0" onMouseClicked="#imageParkinPrintClicked" onMouseEntered="#imageParkinPrintEntered" onMouseExited="#imagePaymentPrintExited" pickOnBounds="true">
+         <image>
+            <Image url="@../assest/icons8_Print_104px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="987.0" layoutY="426.0" prefHeight="25.0" prefWidth="95.0" text="       Print Report" textFill="#949494" />
+      <AnchorPane layoutX="887.0" layoutY="103.0" prefHeight="281.0" prefWidth="239.0" style="-fx-background-color: #ffff;">
+         <children>
+            <JFXTextField fx:id="textCheckInDate" focusColor="#a9aaae" labelFloat="true" layoutX="45.0" layoutY="80.0" prefHeight="25.0" prefWidth="144.0" promptText="Check In Date" />
+            <JFXTextField fx:id="textCheckInTime" focusColor="#a9aaae" labelFloat="true" layoutX="45.0" layoutY="128.0" prefHeight="25.0" prefWidth="144.0" promptText="Check In Time" />
+            <JFXButton fx:id="btnPrintBill" buttonType="RAISED" layoutX="101.0" layoutY="234.0" prefHeight="18.0" prefWidth="86.0" style="-fx-background-color: #E67E22; -fx-background-radius: 20;" text="Print " textFill="#fffafa" />
+            <ImageView fx:id="imagePrint" fitHeight="18.0" fitWidth="25.0" layoutX="108.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8_Print_104px.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="271.0" layoutY="54.0" prefHeight="47.0" prefWidth="182.0" style="-fx-background-color: #85C1E9;">
+         <children>
+            <Label fx:id="lblLight" layoutX="70.0" layoutY="4.0" prefHeight="39.0" prefWidth="106.0" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <ImageView fx:id="imageCar" fitHeight="40.0" fitWidth="40.0" layoutX="7.0" layoutY="4.0" onMouseEntered="#imageCarEntered" onMouseExited="#imageCarExited" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8_Sedan_96px.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="496.0" layoutY="54.0" prefHeight="47.0" prefWidth="182.0" style="-fx-background-color: #EB984E;">
+         <children>
+            <Label fx:id="lblLongVehicle" layoutX="76.0" layoutY="4.0" prefHeight="39.0" prefWidth="106.0" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <ImageView fx:id="imageLongVehicle" fitHeight="30.0" fitWidth="30.0" layoutX="-1.0" layoutY="9.0" onMouseEntered="#imageLongVehicleEntered" onMouseExited="#imageLongVehicleExited" pickOnBounds="true">
+               <image>
+                  <Image url="@../assest/icons8_Semi_Truck_96px_1.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="715.0" layoutY="54.0" prefHeight="47.0" prefWidth="182.0" style="-fx-background-color: #1E8449;">
+         <children>
+            <Label fx:id="lblBicycle" layoutX="76.0" layoutY="4.0" prefHeight="39.0" prefWidth="106.0" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <ImageView fx:id="imageBicycle" fitHeight="30.0" fitWidth="32.0" layoutX="14.0" layoutY="9.0" onMouseEntered="#imageBicycleEntered" onMouseExited="#imageBicycleExited" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8_Motorcycle_104px_1.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

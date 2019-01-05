@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pmlParkingView" prefHeight="648.0" prefWidth="1156.0" style="-fx-background-color: #d6d2d2;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.park.controller.ParkingViewController">
+   <children>
+      <Separator layoutX="384.0" layoutY="13.0" orientation="VERTICAL" prefHeight="632.0" prefWidth="6.0" />
+      <Separator layoutX="768.0" layoutY="13.0" orientation="VERTICAL" prefHeight="632.0" prefWidth="4.0" />
+      <Label layoutX="183.0" layoutY="4.0" prefHeight="37.0" prefWidth="117.0" text="Heavy vehicle" textFill="#e87b08">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="591.0" layoutY="4.0" prefHeight="37.0" prefWidth="104.0" text="Light vehicle" textFill="#0988e5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="965.0" layoutY="4.0" prefHeight="37.0" prefWidth="69.0" text="Bicycle" textFill="#38a444">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="37.0" fitWidth="41.0" layoutX="130.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Semi_Truck_96px_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="41.0" layoutX="534.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Sedan_96px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="41.0" layoutX="908.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Motorcycle_104px_1.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="7.0" layoutY="378.0" prefHeight="254.0" prefWidth="362.0" style="-fx-background-color: #D2D7D3; -fx-background-radius: 20;">
+         <children>
+            <JFXTextField fx:id="txtVehicleNumber" focusColor="#797979" labelFloat="true" layoutX="40.0" layoutY="48.0" prefHeight="37.0" prefWidth="296.0" promptText="Vehicle Number" unFocusColor="BLACK" />
+            <JFXTextField fx:id="txtCustomerName" focusColor="#797979" labelFloat="true" layoutX="40.0" layoutY="107.0" prefHeight="37.0" prefWidth="296.0" promptText="Name" unFocusColor="BLACK" />
+            <JFXTextField fx:id="txtPhoneNumber" focusColor="#797979" labelFloat="true" layoutX="41.0" layoutY="174.0" prefHeight="37.0" prefWidth="296.0" promptText="Phone Number" unFocusColor="BLACK" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="402.0" layoutY="378.0" prefHeight="254.0" prefWidth="350.0" style="-fx-background-color: #D2D7D3; -fx-background-radius: 20;">
+         <children>
+            <JFXTextField fx:id="txtCheckInDate" focusColor="#797979" labelFloat="true" layoutX="27.0" layoutY="139.0" prefHeight="37.0" prefWidth="296.0" promptText="Check In date" unFocusColor="BLACK" />
+            <JFXTextField fx:id="txtTimeIn" focusColor="#797979" labelFloat="true" layoutX="27.0" layoutY="74.0" prefHeight="37.0" prefWidth="296.0" promptText="In time" unFocusColor="BLACK" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="48.0" prefHeight="285.0" prefWidth="350.0">
+         <children>
+            <ScrollPane prefHeight="291.0" prefWidth="350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <JFXMasonryPane fx:id="paneHeavyVehicleSlots" prefHeight="279.0" prefWidth="345.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="403.0" layoutY="48.0" prefHeight="285.0" prefWidth="350.0">
+         <children>
+            <ScrollPane prefHeight="291.0" prefWidth="350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <JFXMasonryPane fx:id="paneLightVehicleSlots" prefHeight="279.0" prefWidth="345.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="790.0" layoutY="48.0" prefHeight="285.0" prefWidth="350.0">
+         <children>
+            <ScrollPane prefHeight="291.0" prefWidth="350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <JFXMasonryPane fx:id="paneBicycleVehicleSlots" prefHeight="279.0" prefWidth="345.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

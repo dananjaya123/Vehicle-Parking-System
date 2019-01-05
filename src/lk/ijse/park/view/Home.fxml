@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="727.0" prefWidth="1369.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.park.controller.HomeController">
+   <children>
+      <AnchorPane focusTraversable="true" layoutY="-2.0" prefHeight="727.0" prefWidth="217.0" style="-fx-background-color: #17202A;" stylesheets="@../css/Home.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" opacity="0.85" prefHeight="38.0" prefWidth="217.0" style="-fx-background-color: #17202A; -fx-border-color: #4D4D4D;" text="City Parking System" textFill="WHITE">
+               <font>
+                  <Font name="Quarca-ConLig" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnDashboard" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="1.0" layoutY="64.0" onMouseClicked="#dashboardClicked" prefHeight="98.0" prefWidth="105.0" style="-fx-border-color: #4D4D4D; -fx-border-width: 0.3;" styleClass="menuButton" stylesheets="@../css/Home.css" text="Dashboard" textFill="#c3c0c0">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fx:id="imageDashboard" fitHeight="70.0" fitWidth="70.0" onMouseEntered="#imageDashboardEntered" onMouseExited="#imageDashboardExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Speed_96px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnParkin" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="109.0" layoutY="64.0" onMouseClicked="#btnParkinClicked" prefHeight="98.0" prefWidth="105.0" style="-fx-border-color: #4D4D4D; -fx-border-width: 0.3;" styleClass="menuButton" stylesheets="@../css/Home.css" text="Parking " textFill="#c3c0c0">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fx:id="immageParkin" fitHeight="60.0" fitWidth="60.0" onMouseEntered="#immageParkinEntered" onMouseExited="#immageParkinExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Car_Rental_96px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnDetails" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="1.0" layoutY="165.0" onMouseClicked="#btnDetailsClicked" prefHeight="98.0" prefWidth="105.0" style="-fx-border-color: #4D4D4D; -fx-border-width: 0.3;" styleClass="menuButton" stylesheets="@../css/Home.css" text="   Manage Details" textFill="#c3c0c0">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fx:id="imageFee" fitHeight="60.0" fitWidth="60.0" onMouseEntered="#imageFeeEntered" onMouseExited="#imageFeeExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Coins_96px_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnReport" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="1.0" layoutY="266.0" onMouseClicked="#btnReportClicked" prefHeight="98.0" prefWidth="105.0" style="-fx-border-color: #4D4D4D; -fx-border-width: 0.3;" styleClass="menuButton" stylesheets="@../css/Home.css" text="Reports" textFill="#bcb7b7">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fx:id="imageReport" fitHeight="60.0" fitWidth="60.0" onMouseEntered="#imageReportEntered" onMouseExited="#imageReportExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Bar_Chart_96px_2.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnLogout" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="109.0" layoutY="266.0" onMouseClicked="#btnLogoutClicked" prefHeight="98.0" prefWidth="105.0" style="-fx-border-color: #4D4D4D; -fx-border-width: 0.3;" styleClass="menuButton" stylesheets="@../css/Home.css" text="Logout" textFill="#c3c0c0">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fx:id="imageLogout" fitHeight="60.0" fitWidth="60.0" onMouseEntered="#imageLogoutEntered" onMouseExited="#imageLogoutExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Exit_96px_1.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label alignment="TOP_CENTER" layoutX="2.0" layoutY="394.0" onMouseClicked="#systemIfoOnClick" opacity="0.85" prefHeight="24.0" prefWidth="208.0" text="System  Info" textFill="WHITE">
+               <font>
+                  <Font name="Quarca-ConLig" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="5.0" layoutY="422.0" opacity="0.85" prefHeight="24.0" prefWidth="208.0" text="City Car Parking V. 1.0.0" textFill="#aeaeae">
+               <font>
+                  <Font name="Quarca-ConLig" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="5.0" layoutY="450.0" opacity="0.85" prefHeight="24.0" prefWidth="208.0" text="Richmond HIll," textFill="#aeaeae">
+               <font>
+                  <Font name="Quarca-ConLig" size="14.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="6.0" layoutY="468.0" opacity="0.85" prefHeight="24.0" prefWidth="208.0" text="Galle." textFill="#aeaeae">
+               <font>
+                  <Font name="Quarca-ConLig" size="14.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="5.0" layoutY="491.0" opacity="0.85" prefHeight="24.0" prefWidth="208.0" text="Email" textFill="#aeaeae">
+               <font>
+                  <Font name="Quarca-ConLig" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="6.0" layoutY="507.0" opacity="0.85" prefHeight="24.0" prefWidth="208.0" text="citypark@gmail.com" textFill="#aeaeae">
+               <font>
+                  <Font name="Quarca-ConLig" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="3.0" layoutY="665.0" opacity="0.85" prefHeight="24.0" prefWidth="208.0" text="Developed By" textFill="#aeaeae">
+               <font>
+                  <Font name="Quarca-ConLig" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="4.0" layoutY="681.0" opacity="0.85" prefHeight="24.0" prefWidth="208.0" text="Dananjaya VIthanage" textFill="#aeaeae">
+               <font>
+                  <Font name="Quarca-ConLig" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="3.0" layoutY="699.0" opacity="0.85" prefHeight="24.0" prefWidth="208.0" text="For More Details : 0779872486" textFill="#aeaeae">
+               <font>
+                  <Font name="Quarca-ConLig" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="59.0" layoutY="526.0" opacity="0.56" prefHeight="10.0" prefWidth="98.0" />
+            <Separator layoutX="14.0" layoutY="655.0" opacity="0.74" prefHeight="10.0" prefWidth="192.0" />
+            <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="7.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXButton fx:id="btnFacebook" contentDisplay="GRAPHIC_ONLY" layoutX="5.0" layoutY="584.0" visible="false">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Facebook_96px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnInsta" contentDisplay="GRAPHIC_ONLY" layoutX="57.0" layoutY="584.0" visible="false">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Google_Maps_100px_2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnGoogle" contentDisplay="GRAPHIC_ONLY" layoutX="110.0" layoutY="584.0" visible="false">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Google_Plus_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnGPS" contentDisplay="GRAPHIC_ONLY" layoutX="165.0" layoutY="585.0" visible="false">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Instagram_104px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnPayment" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="109.0" layoutY="165.0" onMouseClicked="#btnPaymentClicked" prefHeight="98.0" prefWidth="105.0" style="-fx-border-color: #4D4D4D; -fx-border-width: 0.3;" styleClass="menuButton" stylesheets="@../css/Home.css" text="Payment" textFill="#c3c0c0">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fx:id="imagePayment" fitHeight="60.0" fitWidth="60.0" onMouseEntered="#imagePaymentEntered" onMouseExited="#imagePaymentExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Transaction_96px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="217.0" prefHeight="34.0" prefWidth="1156.0" style="-fx-background-color: #2C3E50;">
+         <children>
+            <Label fx:id="lblDate" prefHeight="38.0" prefWidth="169.0" textFill="WHITE">
+               <font>
+                  <Font name="Quarca-ConLig" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="btnClose" layoutX="1108.0" layoutY="2.0" prefHeight="34.0" prefWidth="42.0" textFill="WHITE" />
+            <Label layoutX="1066.0" layoutY="2.0" prefHeight="34.0" prefWidth="42.0" textFill="WHITE" />
+            <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="1119.0" layoutY="9.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assest/icons8_Delete_96px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="1078.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8_Subtract_96px.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="pnlMain" layoutX="217.0" layoutY="36.0" prefHeight="689.0" prefWidth="1156.0" style="-fx-background-color: #c3c0c0; -fx-border-width: 5;" />
+   </children>
+</AnchorPane>

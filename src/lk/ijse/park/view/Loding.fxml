@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.park.view.LodingController">
+   <children>
+      <ImageView fitHeight="474.0" fitWidth="601.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assest/Loading-Full.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="439.0" layoutY="355.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/584b607f5c2ff075429dc0e7b8d142ef.gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="progress" layoutX="14.0" layoutY="434.0" prefHeight="17.0" prefWidth="36.0" />
+   </children>
+</AnchorPane>

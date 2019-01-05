@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pnlFee" prefHeight="648.0" prefWidth="1139.0" style="-fx-background-color: #eae8e8;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.park.controller.ManageDeatilsController">
+   <children>
+      <Separator layoutX="1.0" layoutY="51.0" prefHeight="4.0" prefWidth="1139.0" />
+      <AnchorPane fx:id="pnlAdd" layoutX="11.0" layoutY="55.0" prefHeight="593.0" prefWidth="1119.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <AnchorPane layoutX="26.0" layoutY="20.0" prefHeight="558.0" prefWidth="357.0" style="-fx-background-color: #d3d0d0; -fx-background-radius: 20;">
+               <children>
+                  <Label layoutX="82.0" layoutY="14.0" prefHeight="40.0" prefWidth="173.0" text="Add Slot">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imagePakinSlot" fitHeight="39.0" fitWidth="50.0" layoutX="21.0" layoutY="14.0" onMouseEntered="#imagePakinSlotEntered" onMouseExited="#imagePakinSlotExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Outdoor_Parking_100px_1.png" />
+                     </image>
+                  </ImageView>
+                  <JFXComboBox fx:id="cmboParkingArea2" focusColor="#e4e4e4" labelFloat="true" layoutX="37.0" layoutY="123.0" onAction="#cmboParkingArea2OnAction" prefHeight="25.0" prefWidth="190.0" promptText="Parkin Aria">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXComboBox>
+                  <JFXTextField fx:id="txtSlotName" focusColor="#a9aaae" labelFloat="true" layoutX="37.0" layoutY="176.0" onAction="#slotOnAction" prefHeight="25.0" prefWidth="190.0" promptText="Add new Slot Name">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXTextField>
+                  <JFXTextField fx:id="txtWidth" focusColor="#a9aaae" labelFloat="true" layoutX="37.0" layoutY="293.0" onAction="#widthOnaction" prefHeight="25.0" prefWidth="190.0" promptText="Width">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXTextField>
+                  <JFXTextField fx:id="txtLength" focusColor="#a9aaae" labelFloat="true" layoutX="37.0" layoutY="233.0" onAction="#lengthOnAction" prefHeight="25.0" prefWidth="190.0" promptText="Length">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXTextField>
+                  <JFXButton buttonType="RAISED" layoutX="170.0" layoutY="403.0" onAction="#btnSlotAddOnAction" prefHeight="25.0" prefWidth="73.0" ripplerFill="#141414" style="-fx-background-color: #5999C7; -fx-background-radius: 20;" text="Add" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXButton>
+                  <JFXButton layoutX="249.0" layoutY="404.0" onAction="#btnSlotUpdateOnAction" prefHeight="24.0" prefWidth="73.0" style="-fx-background-color: #E67E22; -fx-background-radius: 20;" text="Update" textFill="WHITE">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fitHeight="12.0" fitWidth="18.0" layoutX="185.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Downloading_Updates_104px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="imageFeeDelete1" fitHeight="18.0" fitWidth="18.0" layoutX="252.0" layoutY="407.0" onMouseEntered="#imageFeeDeleteEntered" onMouseExited="#imageFeeDeleteExited" pickOnBounds="true">
+                     <image>
+                        <Image url="@../assest/icons8_Edit_File_96px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <JFXTextField fx:id="txtPSID" focusColor="#a9aaae" labelFloat="true" layoutX="37.0" layoutY="72.0" onAction="#PSIDSearchOnAction" prefHeight="25.0" prefWidth="190.0" promptText="PSID">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXTextField>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="401.0" layoutY="20.0" prefHeight="558.0" prefWidth="366.0" style="-fx-background-color: #d3d0d0; -fx-background-radius: 20;">
+               <children>
+                  <Label layoutX="93.0" layoutY="14.0" prefHeight="40.0" prefWidth="227.0" text="Add Parking Area">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtPAID" focusColor="#a9aaae" labelFloat="true" layoutX="71.0" layoutY="92.0" onAction="#PAIDSearchOnAction" prefHeight="25.0" prefWidth="190.0" promptText="PAID">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtParkingArea" focusColor="#a9aaae" labelFloat="true" layoutX="71.0" layoutY="145.0" onAction="#parkingAreaOnAction" prefHeight="25.0" prefWidth="190.0" promptText="Parking Area">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXTextField>
+                  <JFXButton buttonType="RAISED" layoutX="185.0" layoutY="317.0" onAction="#btnParkingAreaAddOnAction" prefHeight="25.0" prefWidth="73.0" ripplerFill="#141414" style="-fx-background-color: #5999C7; -fx-background-radius: 20;" text="Add" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fitHeight="12.0" fitWidth="18.0" layoutX="195.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Downloading_Updates_104px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <JFXButton layoutX="264.0" layoutY="318.0" onAction="#btnParkingAreaUpdateOnAction" prefHeight="24.0" prefWidth="73.0" style="-fx-background-color: #E67E22; -fx-background-radius: 20;" text="Update" textFill="WHITE">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fx:id="imageFeeDelete111" fitHeight="18.0" fitWidth="18.0" layoutX="264.0" layoutY="321.0" onMouseEntered="#imageFeeDeleteEntered" onMouseExited="#imageFeeDeleteExited" pickOnBounds="true">
+                     <image>
+                        <Image url="@../assest/icons8_Edit_File_96px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="imagePakinSlot121" fitHeight="39.0" fitWidth="50.0" layoutX="40.0" layoutY="15.0" onMouseEntered="#imagePakinSlotEntered" onMouseExited="#imagePakinSlotExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Parking_96px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="txtFee" focusColor="#a9aaae" labelFloat="true" layoutX="71.0" layoutY="195.0" onAction="#feeOnAction" prefHeight="25.0" prefWidth="190.0" promptText="Fee">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXTextField>
+                  <JFXTextField fx:id="txtVehicleCategory" labelFloat="true" layoutX="71.0" layoutY="244.0" onAction="#vehicleCategoryOnAction" prefHeight="25.0" prefWidth="190.0" promptText="Vehicle Category" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <ImageView fitHeight="270.0" fitWidth="329.0" layoutX="827.0" layoutY="308.0" opacity="0.22" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/valet-parking-512.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="862.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #d3d0d0; -fx-background-radius: 20;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <JFXButton fx:id="btnViewSlot" buttonType="RAISED" layoutX="56.0" layoutY="80.0" onAction="#btnViewSlotonAction" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #26A65B; -fx-background-radius: 20;" text="View Slot" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="135.0" layoutY="16.0" orientation="VERTICAL" prefHeight="39.0" prefWidth="6.0" />
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="7.0" prefHeight="39.0" prefWidth="109.0" text="Add" textFill="#8d8989">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAddManage" layoutX="147.0" layoutY="7.0" onMouseClicked="#btnAddManageClicked" prefHeight="39.0" prefWidth="109.0" text="Manage" textFill="#8d8989">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

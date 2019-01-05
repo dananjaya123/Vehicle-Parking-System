@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pnlManage" prefHeight="648.0" prefWidth="1139.0" style="-fx-background-color: #eae8e8;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.park.controller.ManageViewController">
+   <children>
+      <Separator layoutX="1.0" layoutY="51.0" prefHeight="4.0" prefWidth="1139.0" />
+      <Separator layoutX="135.0" layoutY="16.0" orientation="VERTICAL" prefHeight="39.0" prefWidth="6.0" />
+      <JFXButton fx:id="btnAddManage" buttonType="RAISED" layoutX="147.0" layoutY="7.0" prefHeight="39.0" prefWidth="109.0" text="Manage" textFill="#8d8989">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="11.0" layoutY="55.0" prefHeight="593.0" prefWidth="1119.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="797.0" layoutY="-194.0" prefHeight="40.0" prefWidth="230.0" text="Manage Category">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="3.0" layoutY="315.0" prefHeight="273.0" prefWidth="1113.0" style="-fx-background-color: #d3d0d0;">
+               <children>
+                  <TableView fx:id="tableSlot" layoutX="11.0" layoutY="100.0" prefHeight="168.0" prefWidth="1102.0">
+                     <columns>
+                        <TableColumn fx:id="colomeParkingSlotID" prefWidth="121.99996948242188" text="SID" />
+                        <TableColumn fx:id="colomeParkingArea3" prefWidth="273.0" text="Parking Area" />
+                        <TableColumn fx:id="colomeAvailableSlot" prefWidth="257.0" text="Slot Name" />
+                        <TableColumn fx:id="colomeParkingSlotLength" prefWidth="232.0" text="Length" />
+                        <TableColumn fx:id="colomeParkingSlotWidth" prefWidth="217.0" text="Width" />
+                     </columns>
+                  </TableView>
+                  <ImageView fx:id="imageSlotPrint1" fitHeight="24.0" fitWidth="24.0" layoutX="1075.0" layoutY="77.0" onMouseClicked="#imageSlotPrintClicked" onMouseEntered="#imageSlotPrintEntered" onMouseExited="#imageSlotPrintExited" pickOnBounds="true">
+                     <image>
+                        <Image url="@../assest/icons8_Print_104px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="962.0" layoutY="76.0" prefHeight="25.0" prefWidth="95.0" text="       Print Report" textFill="#949494" />
+                  <Label layoutX="11.0" layoutY="36.0" prefHeight="33.0" prefWidth="1102.0" style="-fx-background-color: #1E8449;" text="  Manage Slot" textFill="#fffdfd">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <TextField fx:id="lblParkingSlotSearch" layoutX="181.0" layoutY="40.0" prefHeight="25.0" prefWidth="215.0" />
+                  <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="154.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Search_100px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="409.0" layoutY="41.0" prefHeight="25.0" prefWidth="39.0" text="Search" textFill="#c9c9c9" />
+                  <JFXButton layoutX="101.0" layoutY="76.0" onAction="#deleteParkngSlotOnAction" prefHeight="24.0" prefWidth="81.0" style="-fx-background-color: #E67E22; -fx-background-radius: 20;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="11.0" layoutY="76.0" prefHeight="24.0" prefWidth="81.0" style="-fx-background-color: #5999C7; -fx-background-radius: 20;" text="Edit" textFill="WHITE">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fx:id="imageFeeEdit1" fitHeight="12.0" fitWidth="12.0" layoutX="19.0" layoutY="82.0" onMouseEntered="#imageFeeEditEnterd" onMouseExited="#imageFeeEditExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Edit_File_96px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imageFeeDelete1" fitHeight="18.0" fitWidth="18.0" layoutX="101.0" layoutY="79.0" onMouseEntered="#imageFeeDeleteEntered" onMouseExited="#imageFeeDeleteExited" pickOnBounds="true">
+                     <image>
+                        <Image url="@../assest/icons8_Trash_96px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="455.0" layoutY="-6.0" prefHeight="40.0" prefWidth="190.0" text="Manage Slot">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imageAddFee1" fitHeight="39.0" fitWidth="48.0" layoutX="409.0" layoutY="-5.0" onMouseEntered="#imageAddFeeEntered" onMouseExited="#imageAddFeeExited" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest/icons8_Outdoor_Parking_100px_1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <Label layoutX="434.0" layoutY="14.0" prefHeight="40.0" prefWidth="306.0" text="Manage Parking Area">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imagePakinSlot1" fitHeight="39.0" fitWidth="50.0" layoutX="380.0" layoutY="15.0" onMouseEntered="#imagePakinSlotEntered" onMouseExited="#imagePakinSlotExited" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8_Public_Transportation_52px_1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="9.0" layoutY="62.0" prefHeight="33.0" prefWidth="1102.0" style="-fx-background-color: #1E8449;" text="  Manage Parking Area" textFill="#fffdfd">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <TextField fx:id="lblParkingAreaSearch" layoutX="203.0" layoutY="66.0" prefHeight="25.0" prefWidth="215.0" />
+            <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="176.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8_Search_100px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="431.0" layoutY="67.0" prefHeight="25.0" prefWidth="39.0" text="Search" textFill="#c9c9c9" />
+            <TableView fx:id="tableParking" layoutX="6.0" layoutY="136.0" prefHeight="168.0" prefWidth="1102.0">
+               <columns>
+                  <TableColumn fx:id="colomeParkingAreaID" prefWidth="129.0" text="PaID" />
+                  <TableColumn fx:id="colomeParkingArea1" prefWidth="310.0" text="Parkin Area" />
+                  <TableColumn fx:id="colomeParkingFee" prefWidth="238.0" text="Fee" />
+                  <TableColumn fx:id="colomeParkingVehicleCategory" prefWidth="424.0" text="Vehicle Category" />
+               </columns>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TableView>
+            <JFXButton layoutX="104.0" layoutY="107.0" onAction="#deleteParkingAreaOnAction" prefHeight="24.0" prefWidth="81.0" style="-fx-background-color: #E67E22; -fx-background-radius: 20;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="14.0" layoutY="107.0" prefHeight="24.0" prefWidth="81.0" style="-fx-background-color: #5999C7; -fx-background-radius: 20;" text="Edit" textFill="WHITE">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="imageFeeEdit111" fitHeight="12.0" fitWidth="12.0" layoutX="22.0" layoutY="113.0" onMouseEntered="#imageFeeEditEnterd" onMouseExited="#imageFeeEditExited" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8_Edit_File_96px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageFeeDelete111" fitHeight="18.0" fitWidth="18.0" layoutX="104.0" layoutY="110.0" onMouseEntered="#imageFeeDeleteEntered" onMouseExited="#imageFeeDeleteExited" pickOnBounds="true">
+               <image>
+                  <Image url="@../assest/icons8_Trash_96px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageFeePrint1" fitHeight="24.0" fitWidth="24.0" layoutX="1081.0" layoutY="107.0" onMouseClicked="#imageFeePrintClicked" onMouseEntered="#imageFeePrintEntered" onMouseExited="#imageFeePrintExited" pickOnBounds="true">
+               <image>
+                  <Image url="@../assest/icons8_Print_104px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="975.0" layoutY="106.0" prefHeight="25.0" prefWidth="95.0" text="       Print Report" textFill="#949494" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnAddManage" layoutX="14.0" layoutY="7.0" onMouseClicked="#btnAddManage" prefHeight="39.0" prefWidth="109.0" text="Add" textFill="#979191">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

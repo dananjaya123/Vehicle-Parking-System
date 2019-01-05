@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pnlLogin" opacity="0.79" prefHeight="253.0" prefWidth="394.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.park.controller.AdminLoginController">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <children>
+      <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="33.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Male_User_100px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="35.0" layoutX="33.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/icons8_Key_100px.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="228.0" fitWidth="289.0" layoutX="65.0" layoutY="10.0" opacity="0.29" pickOnBounds="true">
+         <image>
+            <Image url="@../assest/valet-parking-512.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="textUsername" focusColor="#949191" labelFloat="true" layoutX="70.0" layoutY="55.0" onAction="#userNameOnAction" prefHeight="30.0" prefWidth="276.0" promptText="User Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXTextField>
+      <Label fx:id="lblUserName" layoutX="67.0" layoutY="85.0" prefHeight="25.0" prefWidth="282.0" textFill="RED" />
+      <JFXPasswordField fx:id="pwsField" focusColor="#949494" labelFloat="true" layoutX="70.0" layoutY="110.0" onAction="#passwordOnAtion" prefHeight="25.0" prefWidth="276.0" promptText="Password">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXPasswordField>
+      <Label fx:id="lblPassword" layoutX="70.0" layoutY="141.0" prefHeight="25.0" prefWidth="276.0" textFill="#f20404" />
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="264.0" layoutY="209.0" onAction="#handleLogin" prefHeight="25.0" prefWidth="85.0" ripplerFill="BLACK" style="-fx-background-color: #CF3A24;" text="Login" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>
